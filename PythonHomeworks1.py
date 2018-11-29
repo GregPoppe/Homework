@@ -3,7 +3,7 @@ import csv
 
 
 #Load CSV file
-budget = os.path.join("/Users/gregpoppe/Desktop/DataClass/Finished_Homework/python_challenge", "budget_data.csv")
+budget = os.path.join("budget_data.csv")
 
 #Declare Dictionary and Lists
 DataDict = {}
@@ -34,17 +34,23 @@ WorstMonth_Date = list(DataDict.keys())[list(DataDict.values()).index(WorstMonth
 
 
 
-print('   ')
-print('   ')
-print('Financial Analysis')
-print('Prepared by Greg Poppe')
-print('-----------------------------------------------------------')
-print('   ')
-print(f'Total Months: {CountMonths}')
-print(f'Total Change: $ {totalPL}')
-print(f'Average Change: ${round(totalPL/CountMonths,2)}')
-print(f'Greatest increase in Profits was on: {BestMonth_Date} for: ${BestMonth}')
-print(f'Greatest decrease in Profits was on: {WorstMonth_Date} for: ${WorstMonth}')
-print('   ')
-print('------------------------End--------------------------------')
+PythonBudgetHW = open("PythonBudgetHW.txt","w+")
 
+
+
+PythonBudgetHW.write('   \n')
+PythonBudgetHW.write('   \n')
+PythonBudgetHW.write('Financial Analysis\n')
+PythonBudgetHW.write('Prepared by Greg Poppe\n')
+PythonBudgetHW.write('----------------------------------------------------------\n')
+PythonBudgetHW.write('   \n')
+PythonBudgetHW.write(f'Total Months: {CountMonths}\n')
+PythonBudgetHW.write(f'Total Change: $ {totalPL}\n')
+PythonBudgetHW.write(f'Average Change: ${round(totalPL/CountMonths,2)}\n')
+PythonBudgetHW.write(f'Greatest increase in Profits was on: {BestMonth_Date} for: ${BestMonth}\n')
+PythonBudgetHW.write(f'Greatest decrease in Profits was on: {WorstMonth_Date} for: ${WorstMonth}\n')
+PythonBudgetHW.write('   \n')
+PythonBudgetHW.write('------------------------End--------------------------------\n')
+
+
+PythonBudgetHW.close()

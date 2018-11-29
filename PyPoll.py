@@ -37,14 +37,24 @@ winningvotes = max(results.values())
 winner = list(results.keys())[list(results.values()).index(winningvotes)]
 
 
-print('Election Results')
-print('---------------------------------------')
-print(f'Total Votes: {totalvotes}')
-print('---------------------------------------')
-print(f'Khan: {round(100*(khanvotes/totalvotes),2)}% ({khanvotes})')
-print(f'Li: {round(100*(livotes/totalvotes),2)}% ({livotes})')
-print(f'Correy: {round(100*(correyvotes/totalvotes),2)}% ({correyvotes})')
-print(f"O'Tooley: {round(100*(otooleyvotes/totalvotes),2)}% ({otooleyvotes})")
-print('---------------------------------------')
-print(f'The winner is: {winner} with {winningvotes} votes')
-print('---------------------------------------')
+PythonPollHW = open("PythonPollHW.txt","w+")
+PythonPollHW.write(f"")
+
+
+
+
+
+PythonPollHW.write('Election Results \n')
+PythonPollHW.write('---------------------------------------\n')
+PythonPollHW.write(f'Total Votes: {totalvotes}\n')
+PythonPollHW.write('---------------------------------------\n')
+PythonPollHW.write(f'Khan: {round(100*(khanvotes/totalvotes),2)}% ({khanvotes})\n')
+PythonPollHW.write(f'Li: {round(100*(livotes/totalvotes),2)}% ({livotes})\n')
+PythonPollHW.write(f'Correy: {round(100*(correyvotes/totalvotes),2)}% ({correyvotes})\n')
+PythonPollHW.write(f"O'Tooley: {round(100*(otooleyvotes/totalvotes),2)}% ({otooleyvotes})\n")
+PythonPollHW.write('---------------------------------------\n')
+PythonPollHW.write(f'The winner is: {winner} with {winningvotes} votes\n')
+PythonPollHW.write('---------------------------------------')
+
+
+PythonPollHW.close()
