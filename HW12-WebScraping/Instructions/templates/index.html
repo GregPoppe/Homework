@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>We going to Mars!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="jumbotron text-center">
+      <h1>Get the Latest News about Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click me, idiot!</a></p>
+    </div>
+
+
+
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src= {{ last_image }} class="d-block w-100" alt="...">
+        </div>
+  
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Latest News</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ Title }}</h6>
+          <p class="card-text">{{ News }}</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+
+
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Latest Weather</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Via Twitter</h6>
+          <p class="card-text">{{ weather }}</p>
+          <a href="https://twitter.com/marswxreport?lang=en" class="card-link">See Here</a>
+
+        </div>
+      </div>
+        
+
+
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Some Mars Facts</h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <p class="card-text">{{ facts }}</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+      </div>
+      
+
+
+
+    </div>
+
+
+
+
+</div>
+
+  </div>
+</body>
+
+</html>
+
